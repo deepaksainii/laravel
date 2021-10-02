@@ -20,7 +20,7 @@ use App\Http\Controllers\Auth\ChangePassword;
 //     return view('welcome');
 // });
 
-Route::get('/',[StudentController::class,'index'])->name('home');
+Route::get('/',[StudentController::class,'index'])->name('myhome');
 Route::get('/test',[TestController::class,'index']);
 Route::get('/create',[StudentController::class,'create'])->name('create');
 Route::post('/create',[StudentController::class,'store'])->name('store');

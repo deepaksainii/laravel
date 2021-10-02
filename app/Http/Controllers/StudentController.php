@@ -37,7 +37,7 @@ class StudentController extends Controller
         $student->phone         = $request->phone;
         $student->save();
 
-        return(redirect(route('home')))->with('message','User successfully created');
+        return(redirect(route('myhome')))->with('message','User successfully created');
     }
 
     public function update(Request $request,$id){
@@ -55,11 +55,11 @@ class StudentController extends Controller
         $student->phone         = $request->phone;
         $student->save();
 
-        return(redirect(route('home')))->with('message','User is successfully updated');
+        return(redirect(route('myhome')))->with('message','User is successfully updated');
 
     }
     public function delete($id){
         Students::find($id)->delete();
-        return(redirect(route('home')))->with('message','User is successfully deleted');
+        return(redirect(route('myhome')))->with('message','User is successfully deleted');
     }
 }
